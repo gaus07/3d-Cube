@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.2%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background: rgb(15, 15, 15);
+    font-size: 2rem;
+    font-family: sans-serif;
+}
+
+.square{
+    position: relative;
+    width: 30rem;
+    height: 30rem;
+    /* background-color: #fff; */
+    transform-style: preserve-3d;
+    animation: animate 10s linear infinite;
+    /* transform: rotateX(45deg) rotateY(45deg); */
+    /* transform-origin: top; */
+    
+}
+
+@keyframes animate{
+    0%{
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    100%{
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+.top{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    opacity: 0.5;
+    transform:  translateZ(15rem) rotateX(90deg)  translateZ(15rem);
+}
+
+.bottom{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: orange;
+    opacity: 0.5;
+    transform: translateZ(15rem) rotateX(90deg) translateZ(-15rem);
+}
+
+.front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    opacity: 0.5;
+}
+
+.back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    opacity: 0.5;
+    transform: translateZ(30rem);
+}
+
+.right{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: yellow;
+    opacity: 0.5;
+    transform: translateZ(15rem) rotateY(90deg) translateZ(15rem);
+}
+
+.left{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.5;
+    transform: translateZ(15rem) rotateY(90deg) translateZ(-15rem);
+}
+
+@media(max-width:1000px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media(max-width:768px){
+    html{
+        font-size: 45%;
+    }
+}
+
+@media(max-width:550px){
+    html{
+        font-size: 30%;
+    }
+}
+
+@media(max-width:250px){
+    html{
+        font-size: 20%;
+    }
+}
